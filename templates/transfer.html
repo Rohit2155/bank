@@ -3,16 +3,25 @@
 {% block title %}   Send Money | Bank {% endblock %}
 
 {% block content %}
+<br><br><br><br><br>
 <center>
 <form method="POST" action="" class="form-center">
-    <h3> SEND MONEY</h3>
+    {% csrf_token %}
+    <h3> SEND MONEY</h3> <br>
         <div class="container">
             <div class="row col-6">
-
-                <input type="text" name="cust_id" class="form-control col-5 mx-3" placeholder="CUSTOMER ID">
-
+                <input type="number" name="cust_id" class="form-control col-10" placeholder="CUSTOMER ID">
             </div>
-
+            <br>
+            <div class="row col-6">
+                <input type="number" name="amount" class="form-control col-10" placeholder="AMOUNT">
+            </div>
+            <br>
+            <div class="row col-6">
+                <h4>Current Balance:</h4>
+            </div>
+            <br>
+             <input type="submit" class="rounded-pill btn btn-dark" value="Transfer">
         </div>
 </form>
 </center> 

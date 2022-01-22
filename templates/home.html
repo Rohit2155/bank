@@ -20,7 +20,11 @@
                 <div class='card col-4'>
                     <img src="{{MEDIA_URL}}credit.jpg">
                     <div class='card-body'>
-                        <center><button class="btn btn-primary rounded-pill btn-success">CREDIT</button></center> 
+                        <center>
+                            <a href="http://localhost:8000/transaction/deposit">
+                            <button class="btn btn-primary rounded-pill btn-success">CREDIT</button>
+                            </a>
+                        </center> 
                     </div>
                 </div>
             
@@ -30,7 +34,11 @@
                     <div class='card col-4'>
                     <img src = "{{ MEDIA_URL }}transfer.jpg"/>
                     <div class='card-body'>
-                        <center><button class="btn btn-primary rounded-pill btn-dark">TRANSFER</button></center>
+                        <center>
+                            <a href="http://localhost:8000/transaction/transfer">
+                            <button class="btn btn-primary rounded-pill btn-dark">TRANSFER</button>
+                            </a>
+                        </center>
                     </div>
                 </div>
             
@@ -38,8 +46,12 @@
         
                 <div class='card col-4'>
                     <img src = "{{ MEDIA_URL }}debit.png"/>
-                    <div class='card-body'>
-                        <center><button class="btn btn-primary rounded-pill btn-danger">DEBIT</button></center>
+                    <div class='card-body '>
+                        <center>
+                            <a href="http://localhost:8000/transaction/withdraw">
+                            <button class="btn btn-primary rounded-pill btn-danger">DEBIT</button>
+                            </a>
+                        </center>
                     </div>
                 </div>
 
