@@ -1,15 +1,16 @@
 {% extends 'common.html' %}
 
 {% block title %}   Home | Bank {% endblock %}
-
+{% block stylesheet %}
+.images{
+    background-image : url('{{ MEDIA_URL }}credit.jpg');
+}
+{% load static %}
+<link rel="stylesheet" href="{% static 'home.css'%}">
+{% endblock %}
 {% block content %}
-<style>
-    img{
-        max-height: 60%;
-    }
-</style>
-<br><br><br><br><br><br><br><br>
 
+<br><br><br><br><br><br>
     {% if request.user.is_authenticated %}
 
     <div class='container my-auto' >    
@@ -17,18 +18,19 @@
             
             
                 <div class='card col-4'>
-                    <img src = "{{ MEDIA_URL }}credit.jpg"/>
+                    <img src="{{MEDIA_URL}}credit.jpg">
                     <div class='card-body'>
-                        <h5 class='card-title' style="text-align: center;"> CREDIT</h5>
+                        <center><button class="btn btn-primary rounded-pill btn-success">CREDIT</button></center> 
                     </div>
                 </div>
             
 
             
-                <div class='card col-4'>
+                
+                    <div class='card col-4'>
                     <img src = "{{ MEDIA_URL }}transfer.jpg"/>
                     <div class='card-body'>
-                            <h5 class='card-title' style="text-align: center;">TRANSFER</h5>
+                        <center><button class="btn btn-primary rounded-pill btn-dark">TRANSFER</button></center>
                     </div>
                 </div>
             
@@ -37,7 +39,7 @@
                 <div class='card col-4'>
                     <img src = "{{ MEDIA_URL }}debit.png"/>
                     <div class='card-body'>
-                            <h5 class='card-title' style="text-align: center;">DEBIT</h5>
+                        <center><button class="btn btn-primary rounded-pill btn-danger">DEBIT</button></center>
                     </div>
                 </div>
 
